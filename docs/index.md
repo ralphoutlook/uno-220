@@ -70,6 +70,27 @@ Create Raspbian Image for UNO-220
   ```
 **INPORTANT: UNO-220 RTC driver not included in offical Raspberry image's kernel, if user updates the system, please add rtc-rx8010 driver by manual.**
 
+- **Quick way to add RTC module for your Raspberry PI 4**
+
+  The kernel version in UNO-220's SD card image is `4.19.75-v7l+`. 
+  If your Raspberry Pi 4 is not this version, please follow the quick way 
+  to try to replace it. 
+
+  Check Pi's kernel release version. 
+  
+  ```
+  $ uname -r
+  ```
+
+  Copy the rtc driver from original release. 
+  
+  ```
+  $ sudo mkdir -p /lib/modules/$(uname -r)/extra
+  $ sudo cp -a /lib/modules/4.19.75-v7l+/extra/rtc-rx8010.ko /lib/modules/$(uname -r)/extra
+  $ depmod -a 
+  ```
+
+
 ### Raspbian Image Compiler and Kernel Source
 ---
 - [Kernel Source](https://github.com/raspberrypi/linux.git)

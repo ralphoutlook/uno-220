@@ -68,6 +68,7 @@ Create Raspbian Image for UNO-220
   2019-09-26-raspbian-buster-full.img2      532480 13303807 12771328  6.1G 83 Linux
 
   ```
+**INPORTANT: UNO-220 RTC driver not included in offical Raspberry image's kernel, if user updates the system, please add rtc-rx8010 driver by manual.**
 
 ### Raspbian Image Compiler and Kernel Source
 ---

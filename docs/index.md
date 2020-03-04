@@ -82,7 +82,7 @@ Create Raspbian Image for UNO-220
   If you want to change the kernel, please modify the kernel source git URL in Makefile first . 
   
   ```
-  $ git clone --depth 1 -b prject/iocard https://github.com/Advantech-IIoT/uno-220.git
+  $ git clone --depth 1 -b project/iocard https://github.com/Advantech-IIoT/uno-220.git
   $ cd build/kernel
   $ make modules
   ```
